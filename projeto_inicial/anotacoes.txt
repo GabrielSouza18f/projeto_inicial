@@ -23,7 +23,7 @@ soucer .venv/Scripts/Activate -- Ativacao do local
 deactivate -- Desativacao do local
 
 
-Para utilizar o pipx
+Para utilizar o pipx - 
 
 pip install pipx
 
