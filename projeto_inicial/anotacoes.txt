@@ -1,0 +1,52 @@
+Passo para inciar um projeto
+
+pip freeze -- Listar todas as bibliotecas instaladas
+
+pip freeze | xargs pip uninstall -y -- Para desinstalar todas as bibliotecas, rode:
+
+-- realizar a configuração pyenv antes de iniciar os passos abaixo -- 
+
+pyenv install 3.12  -- Versao que deseja
+
+pyenv global 3.12 -- Para o sistema inteiro (global)
+
+
+pyenv local 3.10.6 -- Se quiser usar uma versão apenas em um projeto específico, vá até o diretório do projeto e rode
+
+
+Criacao da maquina virtual para criar um ambiente isolado para desenvolver cada projeto entrar dentro pasta e executar os passos abaixo.
+
+python -m venv .venv
+
+soucer .venv/Scripts/Activate -- Ativacao do local
+
+deactivate -- Desativacao do local
+
+
+Para utilizar o pipx
+
+pip install pipx
+
+pipx install ipython -- Mude a interação com o CMD, por exemplo, quando o Python está ativo.
+
+pipx install poetry -- Tornar mais facil a nossa gestão de dependencia e pacotes.
+
+
+1- poetry config virtualenvs.in-project true -- Configura o Poetry para criar o ambiente virtual dentro da pasta do projeto, ao invés de no diretório global de ambientes virtuais.
+
+2- poetry new nome_projeto - Cria um novo projeto com algumas configurações padrão. // usar a pasta do projeto_django como base para consultar a estrutura.
+
+-- entre na pasta e coloque o comando abaixo depois de seguir as etapas anteriores
+
+3- pyenv local 3.12.1 -- isso ja dentro da pasta onde vc deseja trabalhar. Define a versão do Python a ser usada localmente no diretório do projeto.
+
+4- poetry env use 3.12.1 -- Indica ao Poetry que ele deve usar a versão 3.12.1 para o ambiente virtual do projeto
+
+5- code . -- Abrir o vscode ja na pasta pre config
+
+6- poetry add nome_biblioteca -- Instala a biblioteca (pacote) especificada no projeto
+
+7- poetry shell -- Usado para ativar o ambiente virtual do seu projeto gerenciado pelo Poetry. Quando você executa esse comando.
+
+8- poetry remove nome_biblioteca -- remove uma biblioteca que vc queira do seu projeto
+
